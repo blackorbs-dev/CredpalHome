@@ -1,0 +1,43 @@
+name: credpalhome
+description: "Credpal figma design implementation take home assessment"
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.2.3
+  intl: ^0.20.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  #--------------- LOCAL ASSETS ------------------#
+  assets:
+    - assets/icons/
+    - assets/images/
+
+  #--------------- LOCAL FONTS ------------------#
+  fonts:
+    - family: Avenir
+      fonts:
+        - asset: assets/fonts/AvenirLTProBlack.otf
+          weight: 900
+        - asset: assets/fonts/AvenirLTProHeavy.otf
+          weight: 800
+        - asset: assets/fonts/AvenirLTProHeavy.otf
+          weight: 700
+        - asset: assets/fonts/AvenirLTProMedium.otf
+          weight: 500
+        - asset: assets/fonts/AvenirLTProRoman.otf
+          weight: 400
