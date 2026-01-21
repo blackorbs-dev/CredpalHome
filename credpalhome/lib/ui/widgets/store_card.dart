@@ -17,24 +17,21 @@ class StoreCard extends StatelessWidget {
             child: Stack(
               children: [
                 Positioned(
-                  left: 0,
-                  bottom: 0,
-                  right: 0,
-                  child: Container(
-                    width: 61,
-                    height: 61,
-                    padding: store.color == null ? null : const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      color: store.color,
-                      shape: BoxShape.circle,
-                    ),
+                    left: 0,
+                    bottom: 0,
+                    right: 0,
                     child: ClipOval(
-                      child: Image.asset(
-                        store.image,
-                        fit: BoxFit.contain,
+                      child: Container(
+                        width: 61,
+                        height: 61,
+                        padding: store.color == null ? null : const EdgeInsets.all(6),
+                        color: store.color,
+                        child: Image.asset(
+                          store.image,
+                          fit: BoxFit.contain,
+                        ),
                       ),
-                    ),
-                  ),
+                    )
                 ),
                 if(store.isOnline) Positioned(
                   top: 0,
