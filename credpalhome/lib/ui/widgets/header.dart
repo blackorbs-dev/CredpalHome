@@ -41,7 +41,7 @@ class Header extends StatelessWidget {
                 'Shopping limit: ₦0',
                 style: context.textStyle.labelMedium?.copyWith(
                   color: context.colors.onSurface,
-                  // fontFamily: 'NotoSans', // Avenir font could not display the "₦" symbol
+                  fontFamily: 'NotoSans', // Avenir font could not display the "₦" symbol
                 ),
               ),
               const SizedBox(height: 8),
