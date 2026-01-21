@@ -21,7 +21,7 @@ final appTheme = ThemeData(
       surfaceContainerLow: AppColors.onSurface,
       surfaceContainerHighest: AppColors.onSurface,
       onSurface: AppColors.onSurface,
-      onSurfaceVariant: AppColors.blueDeep40,
+      onSurfaceVariant: AppColors.onSurface,
       error: AppColors.red,
   ),
   textTheme: textTheme,
