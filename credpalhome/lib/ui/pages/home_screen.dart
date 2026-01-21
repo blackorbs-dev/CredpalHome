@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.all(12),
               color: context.colors.primaryContainer,
               child: SizedBox(
-                height: 392, // required for horizontal GridView
+                height: 398, // required for horizontal GridView
                 child: GridView.builder(
                   padding: const EdgeInsetsGeometry.fromSTEB(4,0,4,4),
                   scrollDirection: Axis.horizontal,
@@ -75,8 +75,8 @@ class HomeScreen extends StatelessWidget {
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 4,
                 crossAxisSpacing: 8,
-                mainAxisSpacing: 24,
-                mainAxisExtent: 92
+                mainAxisSpacing: 12,
+                mainAxisExtent: 104
               ),
               delegate: SliverChildBuilderDelegate(
                     (context, index) {

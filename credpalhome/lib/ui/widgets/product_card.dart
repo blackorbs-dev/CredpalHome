@@ -17,7 +17,7 @@ class ProductCard extends StatelessWidget {
       child: Stack(
         children: [
           Padding(
-            padding: const EdgeInsetsGeometry.fromSTEB(10, 0, 10, 8),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -47,18 +47,20 @@ class ProductCard extends StatelessWidget {
                         style: context.textStyle.titleMedium?.copyWith(
                           color: context.colors.primary,
                           fontWeight: FontWeight.w900,
-                          fontFamily: 'NotoSans',
+                          fontFamily: 'NotoSans', // Avenir font could not display the "₦" symbol
                         )
                       ),
                       const SizedBox(width: 8),
-                      Text(
+                      Expanded(child: Text(
                         product.originalPrice.formatPrice(),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: context.textStyle.labelMedium?.copyWith(
                           color: context.colors.secondaryContainer,
                           decoration: TextDecoration.lineThrough,
-                          fontFamily: 'NotoSans',
+                          fontFamily: 'NotoSans', // Avenir font could not display the "₦" symbol
                         )
-                      )
+                      ))
                     ],
                   ),
                 )

@@ -14,23 +14,26 @@ class Header extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Text(
-                'Pay later\neverywhere',
-                style: context.textStyle.headlineMedium
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 6, bottom: 12),
-                child: Image.asset(
-                  'assets/icons/ic_info.png',
-                  width: 18,
-                  height: 18,
+          Expanded(child: RichText(
+            text: TextSpan(
+              children: [
+                TextSpan(
+                  text: 'Pay later\neverywhere',
+                    style: context.textStyle.headlineMedium
                 ),
-              )
-            ]
-          ),
+                WidgetSpan(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 6, bottom: 4),
+                    child: Image.asset(
+                      'assets/icons/ic_info.png',
+                      width: 18,
+                      height: 18,
+                    ),
+                  )
+                )
+              ]
+            ),
+          )),
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
@@ -38,7 +41,7 @@ class Header extends StatelessWidget {
                 'Shopping limit: ₦0',
                 style: context.textStyle.labelMedium?.copyWith(
                   color: context.colors.onSurface,
-                  fontFamily: 'NotoSans',
+                  // fontFamily: 'NotoSans', // Avenir font could not display the "₦" symbol
                 ),
               ),
               const SizedBox(height: 8),

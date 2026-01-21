@@ -30,7 +30,8 @@ class StoreCard extends StatelessWidget {
                     ),
                     child: ClipOval(
                       child: Image.asset(
-                        store.image
+                        store.image,
+                        fit: BoxFit.contain,
                       ),
                     ),
                   ),
@@ -54,8 +55,9 @@ class StoreCard extends StatelessWidget {
             padding: const EdgeInsets.only(top: 4),
             child: Text(
               store.name,
-              style: store.name.length > 13 ? context.textStyle.labelSmall
-                  : context.textStyle.labelMedium,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: context.textStyle.labelMedium,
             ),
           )
         ],
