@@ -1,16 +1,42 @@
-# credpalhome
+# CredPal Mobile App – UI Assessment
 
-Credpal figma design implementation take home assessment
+This repository contains my submission for the CredPal Mobile App Developer take-home UI assessment.
 
-## Getting Started
+Figma reference:  
+https://www.figma.com/file/KZKDiLKAnm04rPAKMx350o/Untitled?node-id=0%3A1&t=XHNQBxPrmi0NBVSu-1
 
-This project is a starting point for a Flutter application.
+## Tech Stack
+- Flutter
+- Dart
 
-A few resources to get you started if this is your first Flutter project:
+Runs on Android, iOS, and Web.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Setup & Run
+flutter pub get  
+flutter run
+
+## Build Outputs
+- Web: flutter build web
+- Android APK: flutter build apk --release
+
+---
+
+## Notes & Assumptions
+- The UI was implemented to closely match the Figma design (spacing, colors, typography).
+- The app is **fully responsive**, adapting layouts and grid column counts for mobile, tablet, and desktop/web screen sizes.
+- The **product section scrolls horizontally**, based on visual cues and layout indications in the Figma design.
+- Some text displaying the Naira currency symbol (`₦`) uses **`NotoSans`** instead of **Avenir**, because Avenir does not support the `₦` glyph.
+
+---
+## Screenshots
+
+### Desktop
+![Desktop Screenshot](assets/screenshots/desktop1.png)
+
+### Mobile
+![Mobile Screenshot 1](assets/screenshots/mobile1.png)  
+![Mobile Screenshot 2](assets/screenshots/mobile1.png)
+
+---
